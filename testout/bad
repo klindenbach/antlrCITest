@@ -1,0 +1,2 @@
+(+ (+ (+ (+ 1 1) 1) 1) <unexpected: [@9,9:9='<EOF>',<-1>,2:0], resync=>)
+ok - result = 4

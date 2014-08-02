@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export CLASSPATH=`pwd`/lib/antlr-3.3-complete.jar:bin
+
+tests=$(ls tests)
+
+for test in $tests; do
+    java a.b.c.Test4 tests/$test > testout/$test
+done

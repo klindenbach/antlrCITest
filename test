@@ -13,7 +13,7 @@ echo "========================"
 echo
 
 failures=0
-tests=$(ls tests | xargs -I {} echo {})
+tests=$(ls tests)
 
 for test in $tests; do
     echo -n TESTING $test:$'\t'
