@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#set -e
+
+export CLASSPATH=`pwd`/lib/antlr-3.3-complete.jar:bin
+
+echo Generating ANTLR Files
+(cd src ; java org.antlr.Tool -make -report -o ../antlr-generated a/b/c/*.g)
+ant || exit -1
+
+echo
+echo "========================"
+echo
+
+failures=0
+tests=$(ls tests | xargs -I {} echo {})
+
+for test in $tests; do
+    echo -n TESTING $test:$'\t'
+    java a.b.c.Test4 tests/$test > /tmp/actual
+    diff /tmp/actual testout/$test
+    
+    if [ $? -eq 0 ]; then
+        echo PASS
+    else
+        echo FAIL 
+        (( failures++ ))
+    fi
+done
+
+echo 
+if [ $failures -eq 0 ]; then
+    echo ALL TEST PASSED
+else
+    echo FAILED $failures TESTS ; exit -1
+fi

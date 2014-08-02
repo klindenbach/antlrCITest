@@ -1,0 +1,2 @@
+(:= x 4) (:= y (+ 2 3)) (* (* 3 (+ (NEGATION x) y)) 3)
+ok - result = 9
