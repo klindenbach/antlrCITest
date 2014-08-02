@@ -61,19 +61,4 @@
             <classpath refid="ANTLR Tutorial 3.x - 1.classpath"/>
         </java>
     </target>
-    <target name="Test3">
-        <java classname="a.b.c.Test3" failonerror="true" fork="yes">
-            <classpath refid="ANTLR Tutorial 3.x - 1.classpath"/>
-        </java>
-    </target>
-    <target name="Test2">
-        <java classname="a.b.c.Test2" failonerror="true" fork="yes">
-            <classpath refid="ANTLR Tutorial 3.x - 1.classpath"/>
-        </java>
-    </target>
-    <target name="Test1">
-        <java classname="a.b.c.Test1" failonerror="true" fork="yes">
-            <classpath refid="ANTLR Tutorial 3.x - 1.classpath"/>
-        </java>
-    </target>
 </project>
