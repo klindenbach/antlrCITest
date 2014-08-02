@@ -29,6 +29,6 @@ public class Test4 {
 		CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
 		EvaluatorWalker walker = new EvaluatorWalker(nodeStream);
 		int result = walker.evaluator();
-		System.out.println("ok - result = " + result);
+		System.out.println("result = " + result);
 	}
 }
