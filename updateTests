@@ -2,8 +2,9 @@
 
 export CLASSPATH=`pwd`/lib/antlr-3.3-complete.jar:bin
 
-tests=$(ls tests)
+tests=$(find tests -type f)
 
-for test in $tests; do
-    java a.b.c.Test4 tests/$test > testout/$test
-done
+for test in $tests
+    do
+        java a.b.c.Test4 $test > testout/$(basename test)
+    done
