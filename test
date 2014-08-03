@@ -8,9 +8,8 @@ echo Generating ANTLR Files
 (cd src ; java org.antlr.Tool -make -report -o ../antlr-generated a/b/c/*.g)
 ant || exit -1
 
-echo
-echo "========================"
-echo
+echo -e "\n========================\n"
+
 
 failures=0
 tests=$(ls tests)
