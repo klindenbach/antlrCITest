@@ -2,6 +2,8 @@
 
 #set -e
 
+exit -1
+
 export CLASSPATH=`pwd`/lib/antlr-3.3-complete.jar:bin
 
 echo Generating ANTLR Files
